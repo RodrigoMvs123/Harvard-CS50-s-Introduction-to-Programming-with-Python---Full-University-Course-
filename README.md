@@ -4,6 +4,8 @@ https://youtu.be/nLRL_NcnK-4
 
 https://raw.githubusercontent.com/RodrigoMvs123/Harvard-CS50-s-Introduction-to-Programming-with-Python---Full-University-Course-/main/README.md
 
+https://github.com/RodrigoMvs123/Harvard-CS50-s-Introduction-to-Programming-with-Python---Full-University-Course-/blame/main/README.md
+
 Modules 
 
 Input
