@@ -1,4 +1,5 @@
-# Harvard-CS50-s-Introduction-to-Programming-with-Python---Full-University-Course-
+
+##  Harvard-CS50-s-Introduction-to-Programming-with-Python---Full-University-Course-
 
 https://youtu.be/nLRL_NcnK-4
 
@@ -6,8 +7,9 @@ https://raw.githubusercontent.com/RodrigoMvs123/Harvard-CS50-s-Introduction-to-P
 
 https://github.com/RodrigoMvs123/Harvard-CS50-s-Introduction-to-Programming-with-Python---Full-University-Course-/blame/main/README.md
 
-Modules 
 
+## Modules 
+```
 Input
 Print 
 Print_Column 
@@ -96,13 +98,16 @@ Generators
 Yield 
 Iterator 
 - - - 
-
+```
+```
 Libraries ( Module ) - random
 Random.html
 docs.python.org/3/library/random.html
 Import
 random.choice ( sequence )
+```
 
+```python
 generate.py
 import random
 
@@ -138,9 +143,9 @@ cards = [ "jack", "queen", "king" ]
 random.shuffle ( cards )
 for card in cards:
        print ( card )
+```
 
-- - -
-
+```
 Library - Statistics 
 docs.python.org/3/library/statistics.html
 average.py 
@@ -154,7 +159,9 @@ Library - System
 docs.python.org/3/library/sys.html
 command-line arguments
 sys.argv ( argument vector )
+```
 
+```python
 name.py
 import sys
 
@@ -202,9 +209,10 @@ print ( "hello, my name is", arg )
 "Or 
 for arg in sys.argv [ 1: - 1 ]:
 print ( "hello, my name is", arg )"
+```
 
 - - -
-
+```
 Packages ( 3rd party libraries )
 PYiP.org 
 pypi.org/project/cowsay 
@@ -212,12 +220,16 @@ Pytest
 
 Cowsay
 Package manager ( pip )
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal 
+```bash
 $ pip install cowsay
 Successfully installed cowsay-4.0
+```
 
+```python
 say.py
 import cowsay 
 Import sys
@@ -229,29 +241,33 @@ if len ( sys.argv ) == 2:
 if len ( sys.argv ) == 2:
        cowsay.trex ( "hello  " + sys.argv [ 1 ] )
 "
-
-- - -
+```
 
 Requests
+
 pypi.org/projects/requests 
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 $ pip install requests 
+```
 Successfully installed requests-2.27.1
 
 itunes.py
-https://itunes.apple.com/search?entity=song&limit=1&term=weezer 
+- https://itunes.apple.com/search?entity=song&limit=1&term=weezer 
 
 JSON ( JavaScript Object Notation  ) 
-
+```
 {
  "resultCount":1,
  "results": [
 {"wrapperType":"track", "kind":"song", "artistId":115234, "collectionId":1440878798, "trackId":1440879325, "artistName":"Weezer", "collectionName":"Weezer", "trackName":"Buddy Holly", "collectionCensoredName":"Weezer", "trackCensoredName":"Buddy Holly", "artistViewUrl":"https://music.apple.com/us/artist/weezer/115234?uo=4", "collectionViewUrl":"https://music.apple.com/us/album/buddy-holly/1440878798?i=1440879325&uo=4", "trackViewUrl":"https://music.apple.com/us/album/buddy-holly/1440878798?i=1440879325&uo=4", 
 "previewUrl":"https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/f0/ba/a8/f0baa81a-7449-c490-f43a-b5c6e3609e3f/mzaf_3988310882581261442.plus.aac.p.m4a", "artworkUrl30":"https://is2-ssl.mzstatic.com/image/thumb/Music125/v4/fc/74/67/fc74674a-1eb0-d50d-33fe-215caee529d1/16UMGIM52971.rgb.jpg/30x30bb.jpg", "artworkUrl60":"https://is2-ssl.mzstatic.com/image/thumb/Music125/v4/fc/74/67/fc74674a-1eb0-d50d-33fe-215caee529d1/16UMGIM52971.rgb.jpg/60x60bb.jpg", "artworkUrl100":"https://is2-ssl.mzstatic.com/image/thumb/Music125/v4/fc/74/67/fc74674a-1eb0-d50d-33fe-215caee529d1/16UMGIM52971.rgb.jpg/100x100bb.jpg", "collectionPrice":9.99, "trackPrice":1.29, "releaseDate":"1994-01-01T12:00:00Z", "collectionExplicitness":"notExplicit", "trackExplicitness":"notExplicit", "discCount":1, "discNumber":1, "trackCount":10, "trackNumber":4, "trackTimeMillis":159587, "country":"USA", "currency":"USD", "primaryGenreName":"Pop", "isStreamable":true}]
 }
+```
 
+```python
 itunes.py
 import requests
 import sys 
@@ -261,11 +277,12 @@ if len ( sys.argv ) ! = 2:
 
 response = request.get ( "https://itunes.apple.com/search?entity=song&limit=1&term" + sys.argv [ 1 ] )
 print ( response.json ( ) ) 
+```
 
 - - 
 
 docs.python.org/3/library/json.html
-
+```python
 itunes.py
 import json
 import requests
@@ -280,10 +297,12 @@ o = response.json ( )
 for result in o [ "results" ]:
        print ( result [ "trackName" ] )
 
+```
+
 - - - 
 
 Libraries 
-
+```python
 sayings.py
 def main ( ): 
        hello ( "world" )
@@ -297,9 +316,10 @@ def goodbye ( name ):
 
 If __name__ == "__main__":
        main ( )
+```
 
 - - 
-
+```python
 say.py
 import sys
 
@@ -307,15 +327,18 @@ from sayings import hello
 
 if len ( sys.argv ) == 2:
        print ( sys.argv [ 1 ] ) 
+```
 
 - - - 
 
 Unit Tests 
-
+```
 Pytest
 Docs.pytest.org
 Pip install pytest
+```
 
+```python
 calculator.py
 def main ( ):
        x = int ( input ( "Whats is x ? " ) ) 
@@ -371,11 +394,15 @@ def test_square ( ):
        assert square ( -2 ) == 4
        assert square ( -3 ) == 9
        assert square ( 0 ) == 0
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 pytest test_calculator.py 
+```
 
+```python
 - -
 
 test_calculator.py
@@ -431,13 +458,17 @@ def test_argument ( ):
 pytest test_hello.py 
 
 - - -
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal 
+```bash
 mkdir.test 
 code test/test_hello.py 
 code /test__init__.py
+```
 
+```python
 test_hello.py
 from hello import hello 
 
@@ -450,6 +481,7 @@ def test_argument ( ):
 - - 
 
 __init__.py
+```
 
 - - - 
 
@@ -481,7 +513,7 @@ with open ( " names.txt ", "a" ) as file:
 code names.txt
 
 - - 
-
+```python
 names.py
 
 with open ("names.txt", "r") as file:
@@ -496,12 +528,15 @@ names.py
 with open ("names.txt", "r") as file:
        for line in file: 
               print("hello,", line.rstrip() 
+```
 
 - - 
 
 docs.python.org/3/library/functions.html#sorted
+
 sorted(iterable, /, *, key=None, reverse=False)
 
+```python
 names.py
 
 names = []
@@ -535,14 +570,17 @@ for name in sorted(names, reverse=True):
        print(f"hello {name}")
 
 code names.csv (comma separated value)
+```
 
 code students.csv
-
+```
 Hermione, Gryffindor
 Harry, Gryffindor
 Ron, Gryffindor
 Draco, Slytherin 
+```
 
+```python
 - - 
 
 code students.py
@@ -609,18 +647,19 @@ def get_name(student):
 
 for student in sorted(students, key=get_name):
        print(f"{student ['name']} is in {student ['house']}")
-
-- -
+```
 
 docs.python.or/3/library/csv.html
 
 students.csv
-
+```
 Hermione, Gryffindor
 Harry, Gryffindor
 Ron, Gryffindor
 Draco, Slytherin 
+```
 
+```python
 studentes.py
 import csv 
 
@@ -633,7 +672,9 @@ with open("students.cvs") as file:
 
        for student in sorted(students, key=lambda student: student["name"]):
        print(f"{student ['name']} is in {student ['house']}")
+```
 
+```python
 - -
 
 students.csv
@@ -673,6 +714,7 @@ home = input("Where is your home ?")
 with open("students.csv", "a") as file:
        writer = csv.writer(file)
        write.writerow([name, home])
+```
 
 Visual Studio Code 
 Terminal
@@ -682,19 +724,23 @@ What is your name ? Harry
 Where is your house ? "Number Four, Privet Drive"
 
 Visual Studio Code 
-Terminal
 
+Terminal
+```
 python students.py 
 What is your name ? Ron
 Where is your house ? The Burrow
-
+```
 Visual Studio Code 
-Terminal
 
+Terminal
+```
 python students.py 
 What is your name ? Draco
 Where is your house ? Malfoy Manor
+```
 
+```python
 - - 
 
 students.csv
@@ -712,27 +758,32 @@ home = input("Where is your home ?")
 with open("students.csv", "a") as file:
        writer = csv.DictWriter(file, fieldnames=["name", "house"])
        write.writerow({"name": name, "home": home}) 
+```
 
 Visual Studio Code 
-Terminal
 
+Terminal
+```
 python students.py 
 What is your name ? Harry
 Where is your house ? "Number Four, Privet Drive"
-
+```
 Visual Studio Code 
-Terminal
 
+Terminal
+```
 python students.py 
 What is your name ? Ron
 Where is your house ? The Burrow
-
+```
 Visual Studio Code 
-Terminal
 
+Terminal
+```
 python students.py 
 What is your name ? Draco
 Where is your house ? Malfoy Manor
+```
 
 - - -
 
@@ -740,11 +791,14 @@ Pil
 
 pillow.readthedocs.io
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 code costume1.gif
 codecostume2.gif
+```
 
+```python
 code costume.py
 import sys
 
@@ -759,23 +813,27 @@ for argv in sys.argv[:1]:
 images[0].save(
        "costumes.gif" save_all=True, append_images= [images [1]], duration=200, 
 )
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal 
+```bash
 python costumes.py costume1.gif costume2.gif
+```
 
 code costumes.gif
 
 - - -
-
+```
 Regular Expression for Valid Email Address
 (Pattern)
 ^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](:?[a-zA-Z0-9]{0,61}[a-zA-Z0-9])?)*$
-
+```
 Regular Expressions 
 
 code validate.py 
 
+```python
 validate.py
 email = ("What is your email ?).strip() 
 
@@ -783,17 +841,24 @@ if "@" in email:
        print("Valid")
 else
        print("Invalid")
+```
 
+### 
 Visual Studio Code 
 Terminal
+```bash
 python validate.py
 What is your email ? malan@harvard.edu
 Valid
+```
 
+```
 python validate.py
 What is your email ? @
 Valid
+```
 
+```python
 - - 
 
 validate.py
@@ -803,41 +868,25 @@ if "@" in email and "." in email:
        print("Valid")
 else
        print("Invalid")
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal
+```bash
 python validate.py
 What is your email ? malan@harvard.edu
 Valid
+```
 
-python validate.py
-What is your email ? @.
-Valid
-
-- -
-
-validate.py
-email = ("What is your email ?).strip()
-
-username, domain = email.split("@")
-
-if username and "." in domain:
-       print("Valid")
-else 
-       print("Invalid") 
-
-Visual Studio Code 
-Terminal
-python validate.py
-What is your email ? malan@harvard.edu
-Valid
-
+```python
 python validate.py
 What is your email ? malan@harvard
 Invalid
+```
+
 
 - -
-
+```python
 validate.py
 email = ("What is your email ?).strip()
 
@@ -847,20 +896,26 @@ if username and domain.endwith(".edu"):
        print("Valid")
 else 
        print("Invalid")
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal
+```bash
 python validate.py
 What is your email ? malan@harvard.edu
 Valid
+```
 
+```python
 python validate.py
 What is your email ? malan@.edu
 Invalid
+```
 
 - -
 
 Re
+```
 docs.python.org/3/library/re.html
 re.search(pattern, string, flags=0)
 docs.python.org/3/library/re.html
@@ -871,7 +926,9 @@ re.fullmatch(pattern, string, flags=0)
 re.IGNORECASE
 re.MULTILINE
 re.DOTALL
+```
 
+```python
 validate.py
 import re
 
@@ -881,29 +938,41 @@ if re.search(r"^\w@(\w+\.)?\w+\.(com|edu|gov|net|org)$", email, re.IGNORECASE):
        print("Valid")
 else 
        print("Invalid")
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal
+```bash
 python validate.py
 What is your email ? malan@harvard.edu
 Valid
+```
 
+```
 python validate.py
 What is your email ? @
 Valid
+```
 
+```
 python validate.py
 What is your email ? malan@harvard?edu
 Invalid
+```
 
+```
 python validate.py
 What is your email ? malan@
 Invalid
+```
 
+```
 python validate.py
 What is your email ? My email address is malan@harvard.edu.
 Invalid
+```
 
+```
 . any character except a new line
 * 0 or more repetitions
 +1 or more repetitions 
@@ -926,51 +995,66 @@ A|B either A or B
 
 start -> q1 -> @ -> q2 
 start ->  q1 -> q2 -> @ -> q3 -> q4
+```
 
 - - 
 
+```python
 code format.py
 
 format.py
 name = input("What is your name ?").strip()
        print(f"hello, {name}")
+```
 
-Visual Studio Code
+
+### Visual Studio Code
 Terminal 
+```bash
 python format.py
 What is your name ? David Malan
 hello, David Malan
+```
 
+```
 python format.py
 What is your name ? Malan, David
 hello, Malan, David 
-
+```
 - -
 
+```
 format.py
 name = input("What is your name ?").strip()
 if "," in name:
        last, first = name.split(", ")
        name = f"{first} {last}"
 print(f"hello, {name}")
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal 
+```bash
 python format.py
 What is your name ? David Malan
 hello, David Malan
+```
 
+```
 python format.py
 What is your name ? Malan, David
 hello, David Malan
+```
 
+```
 python format.py
 What is your name ? Malan,David
 
 ValueError: not enough values to unpack (expected 2, got 1)
-
+```
 - - 
 
+```
 format.py
 import re
 
@@ -980,18 +1064,25 @@ if matches:
        last, first = matches.group()
        name = f"{first} {last}"
 print("hello, {name}")
+```
+
 
 Terminal 
+```bash
 python format.py
 What is your name ? David Malan
 hello, David Malan
+```
 
+```
 python format.py
 What is your name ? Malan, David
 hello, David Malan
+```
 
 - - 
 
+```python
 format.py
 import re
 
@@ -1002,9 +1093,10 @@ if matches:
        name = matches.group(2)
        name = f"{first} {last}"
 print("hello, {name}")
-
+```
 - - 
 
+```python
 format.py
 import re
 
@@ -1013,26 +1105,35 @@ matches = re.search(r"^(.+), *(.+)$", name)
 if matches:
        name = matches.group(2) + " " + matches.group(1)
 print("hello, {name}")
+```
 
 Terminal 
+```bash
 python format.py
 What is your name ? David Malan
 hello, David Malan
+```
 
+```python
 python format.py
 What is your name ? Malan, David
 hello, David Malan
+```
 
+```
 python format.py
 What is your name ? Malan,David
 hello, David Malan
+```
 
+```
 python format.py
 What is your name ? Malan,      David
 hello, David Malan
-
+```
 - - 
 
+```python
 format.py
 import re
 
@@ -1040,64 +1141,76 @@ name = input("What is your name ?").strip()
 if matches := re.search(r"^(.+), *(.+)$", name):
        name = matches.group(2) + " " + matches.group(1)
 print("hello, {name}")
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python format.py
 What is your name ? Malan,David
 hello, David Malan
+```
 
 - - - 
-
+```python
 code twitter.py
 
 twitter.py
 url = input("URL: ").strip()
 print(url)
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal
+```bash
 python twitter.py
 URL: https://twitter.com/davidjmalan
 https://twitter.com/davidjmalan
-
+```
 - -
-
+```pyhton
 twitter.py
 url = input("URL: ").strip()
 
 username = url.replace("https://twitter.com/", "")
 print(f"Username: {username}")
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal
+```bash
 python twitter.py
 URL: https://twitter.com/davidjmalan
 Username: davidjmalan 
+```
 
 - -
 
 Re
-
+```
 docs.python.org/3/library/re.html
 re.sub(pattern, repl, string, count=0, flags=0)
 re.split(pattern, string, maxsplit=0, flags=0)
 re.findall(pattern, string, flags=0)
+```
 
+```python
 twitter.py
 url = input("URL: ").strip()
 
 username = url.removeprefix("https://twitter.com/", "")
 print(f"Username: {username}")
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal
+```bash
 python twitter.py
 URL: My username is https://twitter.com/davidjmalan
 Username: My username is https://twitter.com/davidjmalan
-
+```
 - - 
-
+```python
 twitter.py
 import re
 
@@ -1105,15 +1218,17 @@ url = input("URL: ").strip()
 
 username = re.sub(r"^(https?://)?(www\.)witter\.com/", "", url)
 print(f"Username: {username}")
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal
+```
 python twitter.py
 URL: https://twitter.com/davidjmalan
 Username: davidjmalan 
-
+```
 - -
-
+```python
 twitter.py
 import re
 
@@ -1121,31 +1236,37 @@ url = input("URL: ").strip()
 
 if matches := re.search(r"^https?://(?:www\.)?twitter\.com/([a-z0-9_]+)", url, re.IGNORECASE):
        print(f"Username:", matches.group(1))
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal
+```
 python twitter.py
 URL: https://twitter.com/davidjmalan
 Username: davidjmalan 
+```
 
 Object-Oriented Programming
 
+```pyhton
 code student.py
 
 student.py 
 name = input("Name: ")
 house = input("House: ")
 print(f"{name} from {house}")
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal 
+```bash
 python student.py
 Name: Harry
 House: Gryffindor
 Harry from Gryffindor 
-
+```
 - - 
-
+```python
 student.py 
 def main():
        name = get_name()
@@ -1161,16 +1282,18 @@ def get_house():
 
 if __name__ == "__main__":
        main()
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal 
+```bash
 python student.py
 Name: Harry
 House: Gryffindor
 Harry from Gryffindor 
-
+```
 - - 
-
+```python
 student.py 
 def main():
        student = get_student()
@@ -1185,16 +1308,19 @@ def main():
 
 if __name__ == "__main__":
        main()
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal 
+```bash
 python student.py
 Name: Padma
 House: Gryffindor
 Padma from Ravenclaw
- 
-- - 
+```
 
+- - 
+```python
 student.py 
 def main():
        student = get_student()
@@ -1210,23 +1336,28 @@ def main():
 
 if __name__ == "__main__":
        main()
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal 
+```bash
 python student.py
 Name: Harry
 House: Gryffindor
 Harry from Gryffindor
+```
 
+```
 python student.py
 Name: Padma
 House: Gryffindor
 Padma from Ravenclaw
-
+```
 - -
 
 docs.python.org/3/tutorial/classes.html
 
+```python
 student.py 
 class Student
 
@@ -1242,16 +1373,19 @@ def main():
 
 if __name__ == "__main__":
        main()
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal 
+```bash
 python student.py
 Name: Harry
 House: Gryffindor
 Harry from Gryffindor
+```
 
 - -
-
+```python
 student.py 
 class Student:
        def __init__ (self, name, house): 
@@ -1271,20 +1405,21 @@ def main():
        name = input("Name: ")
        house = input("House: ")
        return Student(name, house) 
-      
 
 if __name__ == "__main__":
        main()
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal 
+```bash
 python student.py
 Name: Harry
 House: Gryffindor
 Harry from Gryffindor
-
+```
 - - 
-
+```pyhton
 student.py 
 class Student:
        def __init__ (self, name, house, patronus): 
@@ -1324,10 +1459,11 @@ def get_student
 
 if __name__ == "__main__":
        main()
+```
 
-
-Visual Studio Code 
+### Visual Studio Code 
 Terminal 
+```bash
 python student.py
 Name: Harry
 House: Gryffindor
@@ -1341,9 +1477,10 @@ House: Slytherin
 Patronus: 
 Expecto Patronum !
 /
+```
 
 - -
-
+```python
 student.py 
 class Student:
        def __init__ (self, name, house): 
@@ -1370,23 +1507,27 @@ def get_student
 
 if __name__ == "__main__":
        main()
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal 
+```bash
 python student.py
 Name: Harry
 House: Gryffindor
 Harry from Gryffindor
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal 
+```bash
 python student.py
 Name: Harry
 House: Gryffindor
 Harry from Number Four, Privet Drive
-
+```
 - - 
-
+```python
 student.py 
 class Student:
        def __init__ (self, name, house): 
@@ -1431,80 +1572,96 @@ def get_student
 
 if __name__ == "__main__":
        main()
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal 
+```bash
 python student.py
 Name: Harry
 House: Gryffindor
 Harry from Number Four, Privet Drive 
+```
+
 
 - - -
-
+```python
 code type.py
 
 type.py
 print(type(50))
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python type.py
 <class 'int'>
-
+```
 - -
 
-
+```python
 type.py
 print(type("hello, world !)")
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python type.py
 <class 'str'>
-
+```
 - - 
-
+```python
 type.py
 print(type([]))
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python type.py
 <class 'list'>
-
+```
 - -
-
+```python
 type.py
 print(type(list()))
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python type.py
 <class 'list'>
-
+```
 
 - -
-
+```python
 type.py
 print(type({}))
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python type.py
 <class 'dict'>
-
+```
 - -
-
+```python
 type.py
 print(type(dict()))
+```
 
-Visual Studio Code
+#### Visual Studio Code
 Terminal
+```bash
 python type.py
 <class 'dict'>
-
+```
 - - - 
-
+```python
 code hat.py
 
 hat.py
@@ -1514,14 +1671,16 @@ class Hat:
 
 hat = Hat()
 hat.sort("Harry")
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python hat.py
 Harry is in some house
-
+```
 - -
-
+```python
 hat.py
 import random
 
@@ -1535,20 +1694,23 @@ class Hat:
 
 hat = Hat()
 hat.sort("Harry")
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python hat.py
 Harry is in Hufflepuff 
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python hat.py
 Harry is in Ravenclaw 
-
-
+```
 - -
-
+```python
 hat.py
 import random
 
@@ -1561,19 +1723,179 @@ class Hat:
 )
 
 Hat.sort("Harry")
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python hat.py
 Harry is in Hufflepuff 
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python hat.py
 Harry is in Gryffindor 
+```
+- - -
+```python
+code type.py
+
+type.py
+print(type(50))
+```
+
+### Visual Studio Code
+Terminal
+```bash
+python type.py
+<class 'int'>
+```
+- -
+
+```python
+type.py
+print(type("hello, world !)")
+```
+
+### Visual Studio Code
+Terminal
+```bash
+python type.py
+<class 'str'>
+```
+- - 
+```python
+type.py
+print(type([]))
+```
+
+### Visual Studio Code
+Terminal
+```bash
+python type.py
+<class 'list'>
+```
+- -
+```python
+type.py
+print(type(list()))
+```
+
+### Visual Studio Code
+Terminal
+```bash
+python type.py
+<class 'list'>
+```
+
+- -
+```python
+type.py
+print(type({}))
+```
+
+### Visual Studio Code
+Terminal
+```bash
+python type.py
+<class 'dict'>
+```
+- -
+```python
+type.py
+print(type(dict()))
+```
+
+### Visual Studio Code
+Terminal
+```bash
+python type.py
+<class 'dict'>
+```
+- - - 
+```python
+code hat.py
+
+hat.py
+class Hat:
+       def sort(self, name):
+               print(name, "is in, "some house")
+
+hat = Hat()
+hat.sort("Harry")
+```
+
+### Visual Studio Code
+Terminal
+```bash
+python hat.py
+Harry is in some house
+``` 
+- -
+```python
+hat.py
+import random
+
+class Hat:
+       def __init__ (self):
+               self.houses["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]
+
+               def sort(self, name):
+                      print(name, "is in, random.choises(self, houses)
+)
+
+hat = Hat()
+hat.sort("Harry")
+```
+
+### Visual Studio Code
+Terminal
+```python
+python hat.py
+Harry is in Hufflepuff 
+```
+
+### Visual Studio Code
+Terminal
+```bash
+python hat.py
+Harry is in Ravenclaw 
+```
+
+- -
+```python
+hat.py
+import random
+
+class Hat:
+       houses["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]
+
+       @classmethod
+       def sort(cls, name):
+                      print(name, "is in, random.choises(cls, houses)
+)
+
+Hat.sort("Harry")
+```
+
+### Visual Studio Code
+Terminal
+```bash
+python hat.py
+Harry is in Hufflepuff 
+```
+
+### Visual Studio Code
+Terminal
+```bash
+python hat.py
+Harry is in Gryffindor 
+```
 
 - - - 
-
+```python
 student.py 
 class Student:
        def __init__ (self, name, house): 
@@ -1595,16 +1917,18 @@ def main():
               
 if __name__ == "__main__":
        main()
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal 
+```bash
 python student.py
 Name: Harry
 House: Gryffindor
 Harry from Gryffindor 
-
+```
 - - -
-
+```
 docs.python.org/3/library/exeptions.html 
 BaseException
  +-- KeyboardInterrupt 
@@ -1623,9 +1947,9 @@ BaseException
        |     +-- IdentationError
        +-- ValueError
 …
-       
+```
 
-
+```python
 code wizard.py
 
 wizard.py
@@ -1648,9 +1972,10 @@ class Professor(Wizard):
 wizard = Wizard("Albus") 
 student = Student("Harry", "Gryffindor")
 professor = Professor("Severus", "Defense Against the Dark Arts") 
-
+```
 - - - 
 
+```python
 code vault.py
 
 vault.py
@@ -1665,12 +1990,16 @@ class Vault:
 
 potter = Vault(100, 50, 25)
 print(potter)
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal
+```bash
 python vault.py
 100 Galleons, 50 Sickles, 25 Knuts 
+```
 
+```python
 - -
 
 vault.py
@@ -1688,15 +2017,17 @@ print(potter)
 
 weasley = Vault(25, 50, 100)  
 print(weasley) 
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal
+```bash
 python vault.py
 100 Galleons, 50 Sickles, 25 Knuts 
 25 Galleons, 50 Sickles, 100 Knuts
-
+```
 - - 
-
+```python
 vault.py
 class Vault:
        def __init__(self, galleons=0, sickles=0, knuts=0):
@@ -1719,19 +2050,24 @@ Knuts = potter.knuts + weasley.knuts
 
 total = Vault(galleons, sickles, knuts)
 print(total) 
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal
+```bash
 python vault.py
 100 Galleons, 50 Sickles, 25 Knuts 
 25 Galleons, 50 Sickles, 100 Knuts
 125 Galleons, 100 Sickles, 125 Knuts
+```
+
 
 - - 
 
 docs.python.org/3/reference/datamodel.html#special-method-names
 object.__add__(self, other) 
 
+```python
 vault.py
 class Vault:
        def __init__(self, galleons=0, sickles=0, knuts=0):
@@ -1756,18 +2092,22 @@ print(weasley)
 
 total = potter + weasley 
 print(total) 
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal
+```bash
 python vault.py
 100 Galleons, 50 Sickles, 25 Knuts 
 25 Galleons, 50 Sickles, 100 Knuts
 125 Galleons, 100 Sickles, 125 Knuts
+```
+
 
 - - -
 
 Et Cetera 
-
+```python
 code houses.py 
 
 houses.py
@@ -1786,16 +2126,19 @@ for student in students:
 
 for house in sorted(houses):
        print(house)
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python houses.py
 Gryffindor
 Ravenclaw
 Slytherin 
+```
 
 - - 
-
+```python
 houses.py
 students = [
        {"name": "Hermione", "house": "Gryffindor"},
@@ -1811,16 +2154,19 @@ for student in students:
 
 for house in sorted(houses):
        print(house)
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python houses.py
 Gryffindor
 Ravenclaw
 Slytherin 
+```
 
 - - -
-
+```python
 code bank.py
 
 bank.py
@@ -1842,15 +2188,17 @@ def withdraw(n):
 
 if __name__  == "__main__":
        main()
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python bank.py
 Balance: 0
 Balance: 50
-
+```
 - -
-
+```python
 bank.py
 class Account:
        def __init__ (self): 
@@ -1875,14 +2223,18 @@ def main():
 
 if __name__ == "__init__": 
          main() 
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python bank.py
 Balance: 0
 Balance: 50
+```
 
 - - - 
+```python
 code meows.py
 
 meows.py
@@ -1890,9 +2242,11 @@ MEOWS = 3
 
 for _ in range(MEOWS):
        print("meow")
+```
 
 - -
 
+```python
 meows.py
 Class Cat:
        MEOWS = 3
@@ -1903,19 +2257,24 @@ Class Cat:
 
 cat = Cat()
 cat.meow()
+```
 
+### 
 Visual Studio Code
 Terminal 
+```bash
 python meows.py
 meow
 meow
 meow
+```
 
 - - 
 
 docs.python.org/3/library/typing.html 
 pip install mypy ( mypy.readthedocs.io )
 
+```python
 meows.py
 def meow(n: int):
        for _ in rang(n):
@@ -1923,20 +2282,25 @@ def meow(n: int):
 
 number: int = int (input("Number: "))
 meow(number) 
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal 
+```bash
 mypy meows.py
 Success: no issues found in 1 source file 
+```
 
 python meows.py
+```
 Number : 3
 meow
 meow
 meow
+```
 
 - -
-
+```python
 meows.py
 def meow(n: int) -> str:
        return "meow/n" * n 
@@ -1944,19 +2308,24 @@ def meow(n: int) -> str:
 number: int = int (input("Number: "))
 meows: str = meow(number) 
 print(meows, end="") 
+```
 
+### 
 Visual Studio Code
 Terminal 
+```python
 python meows.py 
 Number: 3 
 meow
 meow
 meow
+```
 
 - - 
 
 peps.pythpn.prg/pet-0257/ 
 
+```python
 meows.py
 def meow(n: int) -> str:
        """Meow n times."""
@@ -1965,9 +2334,9 @@ def meow(n: int) -> str:
 number: int = int (input("Number: "))
 meows: str = meow(number) 
 print(meows, end="") 
-
+```
 - - 
-
+```python
 meows.py
 def meow(n: int) -> str:
        """
@@ -1984,9 +2353,9 @@ def meow(n: int) -> str:
 number: int = int (input("Number: "))
 meows: str = meow(number) 
 print(meows, end="") 
-
+```
 - -
-
+```python
 meows.py
 import sys
 
@@ -1998,9 +2367,11 @@ elif len(sys.argv) == 3 and sys.argv[1] == "-n":
               print("meow")
 else:
        print("usage: meows.py") 
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal 
+```bash
 python meows.py -n 3
 meow
 meow
@@ -2012,11 +2383,13 @@ python meows.py -n 1
 meow
 python meows.py 
 meow
+```
 
 - - 
 
 docs.python.org/3/library/argparse.html
 
+```python
 meows.py
 import argparse
 
@@ -2026,41 +2399,50 @@ args = parser.parse_args()
 
 for _ in range(args.n):
        print("meow") 
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal 
+```bash
 python meows.py 
 meow
-
+```
 - - -
 
 code unpack.py
 
+```python
 unpack.py
 first, _ = input("What is your name?").split(" ")
 print(f"Hello, {first}")
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python unpack.py
 What is your name? David Malan
 Hello, David 
-
+```
 - -
 
+```python
 unpack.py
 def total(galleos, sickles, knuts):
        return(galleons * 17 * sickles) * 29 + knuts
 
 print(total(100, 50, 25), "Knuts")
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python unpack.js 
 50775 Knuts
-
+```
 - - 
 
+```python
 unpack.py
 def total(galleos, sickles, knuts):
        return(galleons * 17 * sickles) * 29 + knuts
@@ -2068,14 +2450,17 @@ def total(galleos, sickles, knuts):
 coins[100, 50, 25]
 
 print(total(coins[0], coins[1], coins[2]), "Knuts")
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python unpack.js 
 50775 Knuts
-
+```
 - -
 
+```python
 unpack.py
 def total(galleos, sickles, knuts):
        return(galleons * 17 * sickles) * 29 + knuts
@@ -2083,28 +2468,33 @@ def total(galleos, sickles, knuts):
 coins[100, 50, 25]
 
 print(total(*coins), "Knuts")
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python unpack.js 
 50775 Knuts
-
+```
 - -
 
+```python
 unpack.py
 def total(galleos, sickles, knuts):
        return(galleons * 17 * sickles) * 29 + knuts
 
 print(total(galleons=100, sickles=50, knutd=25), "Knuts")
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python unpack.js 
 50775 Knuts
-
+```
 - -
 
-
+```python
 unpack.py
 def total(galleos, sickles, knuts):
        return(galleons * 17 * sickles) * 29 + knuts
@@ -2112,14 +2502,17 @@ def total(galleos, sickles, knuts):
 coins {"galleons": 100, "sickles": 50, "knuts": 25}
 
 print(total(coins["galleons"], cois["sickles"], coins["knuts"]), "Knuts")
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python unpack.js 
 50775 Knuts
-
+```
 - -
 
+```python
 unpack.py
 def total(galleos, sickles, knuts):
        return(galleons * 17 * sickles) * 29 + knuts
@@ -2127,54 +2520,65 @@ def total(galleos, sickles, knuts):
 coins {"galleons": 100, "sickles": 50, "knuts": 25}
 
 print(total(**coins), "Knuts")
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python unpack.js 
 50775 Knuts
-
+```
 - - 
 
 *args, **kwargs 
 
+```python
 unpack.py
 def f(*args, **kwargs):
        print("Positional:", args)
 
 f(100, 50, 25, 5)
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python unpack.py
 Positional: (100, 50, 25, 5)
+```
 
 - -
-
+```python
 unpack.py
 def f(*args, **kwargs):
        print("Namedl:", kwargs)
 
 f(galleons=100, sickles=50, knuts=25)
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python unpack.py
 Named: {"galleons": 100, "sickles": 50, "knuts": 25}
-
+```
 - -
+
 
 docs.python.org/3/library/functions.html#print
 print(*objects, sep=' ', end='/n', file=sys.stdout, flush=false)
 
+```python
 unpack.py
 def print(*objects, sep=" ", end="/n", …):
        for object in objects: 
               … 
-
+```
 - - -
 
 code yell.py
 
+```python
 yell.py
 def main():
        yell("This is CS50")
@@ -2184,14 +2588,17 @@ del yell(phrase):
 
 if __name__ == "__main__":
        main()
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python yell.py
 THIS IS CS50
-
+```
 - -
 
+```python
 yell.py
 def main():
        yell(["This", "is", "CS50"])
@@ -2204,15 +2611,17 @@ del yell(word):
 
 if __name__ == "__main__":
        main()
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python yell.py
 This is CS50
-
+```
 - -
 
-
+```python
 yell.py
 def main():
        yell("This", "is", "CS50")
@@ -2225,18 +2634,20 @@ del yell(*words):
 
 if __name__ == "__main__":
        main()
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python yell.py
 This is CS50
-
+```
 - -
 
 docs.python.org/3/library/functions.html#map 
             map(function, iterable, …)
 
-
+```python
 yell.py
 def main():
        yell("This", "is", "CS50")
@@ -2247,14 +2658,17 @@ del yell(*words):
 
 if __name__ == "__main__":
        main()
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python yell.py
 This is CS50
-
+```
 - -
 
+```python
 yell.py
 def main():
        yell("This", "is", "CS50")
@@ -2265,16 +2679,20 @@ del yell(*words):
 
 if __name__ == "__main__":
        main()
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python yell.py
 This is CS50
+```
 
 - - - 
 
 code gryffindof.py
 
+```python
 gryffindor.py
 students= [
        {"name": "Hermione", "house": "Gryffindor"},
@@ -2289,19 +2707,22 @@ gryffindors = [
 
 for gryffindor in sorted(gryffindors):
        print(gryffindor) 
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal 
+```bash
 python gryffindor.py
 Harry
 Hermione
 Ron 
-
+```
 - -
 
 docs.python.org/3/library/functions.html#filter
             filter(function, iterable)
 
+```python
 gryffindor.py
 students= [
        {"name": "Hermione", "house": "Gryffindor"},
@@ -2317,17 +2738,21 @@ gryffindors = filter(is_gryffindor, students)
 
 for gryffindor in gryffindors:
         print(gryffindor ["name"]) 
+```
 
+### 
 Visual Studio Code 
 Terminal 
+```bash
 python gryffindor.py
 Hermione 
 Harry
 Ron 
+```
 
 - -
 
-
+```python
 gryffindor.py
 students= [
        {"name": "Hermione", "house": "Gryffindor"},
@@ -2343,16 +2768,19 @@ gryffindors = filter(is_gryffindor, students)
 
 for gryffindor in sorted(gryffindors, key=lambda s: s["name"])
         print(gryffindor ["name"]) 
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal 
+```bash
 python gryffindor.py
 Harry
 Hermione 
 Ron 
+```
 
 - -
-
+```python
 gryffindor.py
 students= [
        {"name": "Hermione", "house": "Gryffindor"},
@@ -2365,16 +2793,20 @@ gryffindors = filter(lambda s: s["name"] == Gryffindor, students)
 
 for gryffindor in gryffindors:
         print(gryffindor ["name"]) 
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal 
+```bash
 python gryffindor.py
 Hermione 
 Harry
 Ron 
+```
+
 
 - -
-
+```python
 gryffindor.py
 students = ["hermione", "harry", "ron"]
 
@@ -2384,113 +2816,136 @@ for student in students:
        gryffindor.append({"name": student, "house": Gryffindor})
 
 print(gryffindors) 
-
+```
 - -
 
+```python
 gryffindor.py
 students = ["hermione", "harry", "ron"]
 
 gryffindors = [{"name": student, "house": "Gryffindor"} for student in students]
 
 print(gryffindors)
-
+```
 - -
 
+```python
 gryffindor.py
 students = ["hermione", "harry", "ron"]
 
 gryffindor = {student: "Gryffindor" for student in students} 
 
 print(gryffindors) 
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python gryffindor.py
 {'Hermione': 'Gryffindor', 'Harry': 'Gryffindor', 'Ron': 'Gryffindor'}
-
+```
 - -
 
+```python
 gryffindor.py
 students = ["hermione", "harry", "ron"]
 
 for student in students:
        print(students)
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python gryffindor.py
 Hermione
 Harry
 Ron
+```
 
 - -
-
+```python
 gryffindor.py
 students = ["hermione", "harry", "ron"]
 
 for i in range(len(students))
        print(i, students[i]])
+```
 
+### 
 Visual Studio Code
 Terminal
+```bash
 python gryffindor.py
 0 hermione
 1 harry
 2 ron
+```
 
 - -
-
+```python
 gryffindor.py
 students = ["hermione", "harry", "ron"]
 
 for i in range(len(students))
        print(i + 1, students[i]])
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```
 python gryffindor.py
 1 hermione
 2 harry
 3 ron
+```
+
 
 - -
 
 docs.python.org/3/library/functions.html#enumerate
             enumerate (iterable, start=0)
 
+```python
 gryffindor.py
 students = ["hermione", "harry", "ron"]
 
 for i, student in enumerate(students):
        print(i + 1, student) 
+``` 
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python gryffindor.py
 1 hermione
 2 harry
 3 ron
+```
 
 - - -
-
+```python
 code sleep.py 
 
 sleep.py
 n = int(input("What is n ?))
 for i in range(n):
        print("🚢" * i)
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python sleep.py
 What is n ? 4
 🚢
 🚢🚢
 🚢🚢🚢
 🚢🚢🚢🚢
+```
 
 - -
-
+```python
 sleep.py
 def main()
        n = int(input("What is n ?))
@@ -2499,18 +2954,22 @@ def main()
 
 if __name__ == "__main__":
        main() 
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python sleep.py
 What is n ? 4
 🚢
 🚢🚢
 🚢🚢🚢
 🚢🚢🚢🚢
+```
 
 - - 
 
+```python
 sleep.py
 n = int(input("What is n ?))
 for i in range(n):
@@ -2521,21 +2980,24 @@ def sheep(n):
 
 if __name__ == "__main__":
        main() 
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python sleep.py
 What is n ? 4
 🚢
 🚢🚢
 🚢🚢🚢
 🚢🚢🚢🚢
-
+```
 - -
 
 docs.python.org/3/howto/functional.html#generators
 Yield
 
+```python
 sleep.py
 def main():
        n = int(input("What is n ?))
@@ -2548,20 +3010,24 @@ def sheep(n):
 
 if __name__ == "__main__":
        main() 
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python sleep.py
 What is n ? 4
 🚢
 🚢🚢
 🚢🚢🚢
 🚢🚢🚢🚢
+```
 
 - - -
 
 code say.py
 
+```python
 say.py
 import cowsay
 import pyttsx3 
@@ -2571,9 +3037,11 @@ this = input("What is this ?")
 cowsay.cow(this)
 engine.say(this)
 engine.runAndSay()
+```
 
-Visual Studio Code 
+### Visual Studio Code 
 Terminal
+```bash
 What is this ? This was CS50
 
 This was CS50
@@ -2582,4 +3050,7 @@ This was CS50
                               | - - - - - - |~ 
                                   |       |
                        -      - 
+```
+
+
 
